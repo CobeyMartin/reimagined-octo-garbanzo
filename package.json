@@ -1,0 +1,32 @@
+{
+  "name": "pdf-editor-suite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PDF Editor - Electron app for PDF editing, merging, highlighting, and annotations",
+  "scripts": {
+    "dev": "cd packages/electron-app && ../../node_modules/.bin/electron-forge start",
+    "build": "cd packages/electron-app && ../../node_modules/.bin/electron-forge make",
+    "package": "cd packages/electron-app && ../../node_modules/.bin/electron-forge package",
+    "build:shared": "pnpm --filter @pdf-editor/shared build",
+    "build:all": "pnpm build:shared && pnpm build"
+  },
+  "keywords": [
+    "pdf",
+    "editor",
+    "electron",
+    "vscode-extension",
+    "pdf-merge",
+    "annotations"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "compress-pdf": "^0.5.6"
+  },
+  "devDependencies": {
+    "@electron-forge/maker-dmg": "^7.11.1"
+  }
+}

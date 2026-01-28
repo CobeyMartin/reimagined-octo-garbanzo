@@ -1,0 +1,10 @@
+packages:
+  - packages/*
+
+ignoredBuiltDependencies:
+  - compress-pdf
+  - electron
+  - electron-winstaller
+  - esbuild
+  - fs-xattr
+  - macos-alias

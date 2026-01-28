@@ -1,0 +1,157 @@
+.toolbar {
+  height: 48px;
+  background-color: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  padding-left: 80px; /* Space for macOS traffic lights */
+  gap: 8px;
+  -webkit-app-region: drag;
+}
+
+.toolbar-section {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  -webkit-app-region: no-drag;
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--border);
+  margin: 0 4px;
+}
+
+.toolbar-divider-small {
+  width: 1px;
+  height: 16px;
+  background-color: var(--border);
+  margin: 0 4px;
+  opacity: 0.5;
+}
+
+.toolbar-spacer {
+  flex: 1;
+}
+
+/* Tabs */
+.tabs .tab {
+  padding: 6px 16px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.tabs .tab:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-hover);
+}
+
+.tabs .tab.active {
+  color: var(--text-primary);
+  background-color: var(--accent);
+}
+
+/* Tools */
+.tools .btn-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Zoom */
+.zoom {
+  gap: 8px;
+}
+
+.zoom-level {
+  min-width: 48px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* File info */
+.file-info {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.file-name {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Disabled state */
+.btn-icon:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Compress dropdown */
+.compress-dropdown {
+  position: relative;
+}
+
+.compress-dropdown .btn-icon {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: auto;
+  padding: 0 8px;
+}
+
+.compress-dropdown .dropdown-arrow {
+  margin-left: 2px;
+  opacity: 0.7;
+}
+
+.compress-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  min-width: 180px;
+  overflow: hidden;
+}
+
+.compress-menu button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.15s;
+}
+
+.compress-menu button:hover {
+  background-color: var(--bg-hover);
+}
+
+.compress-menu button span:first-child {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.compress-hint {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}

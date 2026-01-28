@@ -1,0 +1,133 @@
+.merge-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  overflow: auto;
+}
+
+.merge-header {
+  margin-bottom: 24px;
+}
+
+.merge-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.merge-header p {
+  color: var(--text-secondary);
+}
+
+/* Drop zone */
+.drop-zone {
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+  transition: all 0.2s;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drop-zone.drag-over {
+  border-color: var(--accent);
+  background-color: rgba(0, 122, 204, 0.1);
+}
+
+.drop-zone.has-files {
+  border-style: solid;
+  padding: 16px;
+}
+
+.drop-zone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-secondary);
+}
+
+.drop-zone-content svg {
+  opacity: 0.5;
+}
+
+/* Files list */
+.files-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: var(--bg-tertiary);
+  border-radius: 6px;
+}
+
+.file-item .file-name {
+  flex: 1;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-item .page-count {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.file-item .remove-btn {
+  opacity: 0.6;
+}
+
+.file-item .remove-btn:hover {
+  opacity: 1;
+  color: var(--error);
+}
+
+.add-more-btn {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+/* Pages section */
+.pages-section {
+  margin-top: 32px;
+}
+
+.pages-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.pages-section .hint {
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.pages-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Merge actions */
+.merge-actions {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
